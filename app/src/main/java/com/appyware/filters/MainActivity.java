@@ -16,6 +16,7 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String PNG = ".png";
     String currentPhotoPath;
     String currentPhotoName;
 
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
     private String getFileName() {
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String imageFileName = "SelFie_" + timeStamp + "_";
+        String imageFileName = "SelFie_" + timeStamp + "_" + PNG;
         return imageFileName;
     }
 
