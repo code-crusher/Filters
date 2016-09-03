@@ -59,12 +59,17 @@ public class MainActivity extends AppCompatActivity {
 
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Selfie selfie = new Selfie(currentPhotoName, currentPhotoPath);
+
+            Intent i = new Intent(MainActivity.this, FilterActivity.class);
+            i.putExtra("path", selfie.getPath());
+            i.putExtra("name", selfie.getName());
+            startActivity(i);
         }
     }
 
     private String getFileName() {
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String imageFileName = "SelFie_" + timeStamp + "_" + PNG;
+        String imageFileName = "SelFie_" + timeStamp + "_";
         return imageFileName;
     }
 
