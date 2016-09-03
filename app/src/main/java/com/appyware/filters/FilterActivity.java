@@ -35,8 +35,8 @@ public class FilterActivity extends AppCompatActivity {
         String imagepath = getIntent().getExtras().getString("path");
         String name = getIntent().getExtras().getString("name");
 
-        //setNormalPhoto(imagepath);
-        setFilterPhoto(imagepath);
+        setNormalPhoto(imagepath);
+        //setFilterPhoto(imagepath);
 
         // Set title of the activity
         getSupportActionBar().setTitle(name);
